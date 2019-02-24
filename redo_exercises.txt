@@ -1,2 +1,6 @@
 easy4 - what century is that
       - convert num to str
+
+easy5 - clean up the words
+      - daily double
+      - alphabetical numbers

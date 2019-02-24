@@ -15,30 +15,42 @@
 # integer_to_string(0) == '0'
 # integer_to_string(5000) == '5000'
 
-# use modulo  by 10 to individualy get each digit. Story into an array, stop when the number equals zero
-# increase the exponent each time
 
-# use  a constant num-str hash to match each digit
-# join the array.
+# new_arr = []
+# multiple = 1
 
-NUM_TO_STR = Hash[(0..9).zip("0".."9")]
+# digit = num % (10 * multiple)
+# digit /= (1 * multiple)
+ # new arr << digit 
+# num -= digit 
+        
+
+
+# multiple *= 10        
+# break if num == 0
+
+INTS_TO_STRS = Hash[(0..9).zip(("0".."9"))]
 
 def integer_to_string(num)
-  exponent = 1
-  method_num = num
-  digits_arr = []
+  new_arr = []
+  multiple = 1
+
   loop do
-    digit = method_num % (10**exponent) 
-    method_num -= digit
+
+    digit = num % (10 * multiple)
+    num -= digit
+
+    digit /= (1 * multiple)
+    new_arr << digit 
      
-    digits_arr << digit / (10 ** (exponent - 1)) 
-    exponent += 1
-    break if method_num == 0
+    multiple *= 10  
+    break if num == 0
   end
 
-  digits_arr.reverse!.map{|digit| NUM_TO_STR[digit]}.join
+  new_arr.reverse.map {|element| INTS_TO_STRS[element]}.join
 end
 
 p integer_to_string(4321) == '4321'
 p integer_to_string(0) == '0'
 p integer_to_string(5000) == '5000'
+
