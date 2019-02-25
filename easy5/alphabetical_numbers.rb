@@ -9,18 +9,21 @@
 # alphabetic_number_sort((0..19).to_a) == [
 #   8, 18, 11, 15, 5, 4, 14, 9, 19, 1, 7, 17,
 #   6, 16, 10, 13, 3, 12, 2, 0
-# ]
+# 
 
-NUMBER_WORDS = %w( zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen )
+# map out original array to have each number in english 
+
+ ENGLISH_NUMBERS = %w( zero one two three four five six seven eight nine ten
+ eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen)
 
 
-def alphabetic_number_sort(arr)
+ def alphabetic_number_sort(arr)
+   
+  # english_arr = arr.map {|num| ENGLISH_NUMBERS[num]}.sort
+  # english_arr.map {|element| ENGLISH_NUMBERS.index(element) }
 
-  arr.sort_by {|number| NUMBER_WORDS[number]} 
 
-end
+  arr.sort_by {|num| ENGLISH_NUMBERS[num]}
+ end
 
-p alphabetic_number_sort((0..19).to_a) == [
-  8, 18, 11, 15, 5, 4, 14, 9, 19, 1, 7, 17,
-  6, 16, 10, 13, 3, 12, 2, 0
-]
+ p alphabetic_number_sort((0..19).to_a)
