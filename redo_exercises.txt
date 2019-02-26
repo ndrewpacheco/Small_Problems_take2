@@ -1,6 +1,18 @@
-easy4 - what century is that
-      - convert num to str
+easy4 - what century is that X
+      - convert num to str X
 
-easy5 - clean up the words
-      - daily double
-      - alphabetical numbers
+easy5 - clean up the words X 
+      - daily double X
+      - alphabetical numbers X
+
+easy6
+
+ - cute angles - 
+ - delete vowels. Method worked, but couldve used String#delete
+
+
+
+
+
+learn more about Kernel#format
+                 Numeric#divmod
