@@ -22,44 +22,44 @@
 
 # You may use this constant to represent the degree symbol:
 
-# DEGREE = "\xC2\xB0"
+# format method, to format the string
 
 
-# find a way to breakdown the decimals into minutes and seconds.
- # leading zeros when needed
+# degrees = arg.to_i 
 
- # degree_num: make into an int. take the whole numbers save it to a var. 
- # minutes_num: take away degree_num from input. * 60. Make into an int. 
- # seconds_num: similar to above.
+# total_seconds = (degrees - arg) * MINUTES_IN_A_DEGREE * SECONDS_IN_A_MINUTE
 
-# save the diffrent types of symbols into constants.
+# minutes = total_seconds / SECONDS_IN_A_MINUTE
+
+# seconds total_seconds %  SECONDS_IN_A_MINUTE
 
 DEGREE = "\xC2\xB0"
-MINUTES = "'"
-SECONDS = "\""
+MINUTES_IN_A_DEGREE = 60
+SECONDS_IN_A_MINUTE = 60
 
-def dms(angle)
-  degree_num = angle.to_i
-  degrees_to_minutes = ((angle - degree_num) * 60)
-  minutes_num = degrees_to_minutes.to_i
-  seconds_num = ((degrees_to_minutes - minutes_num) * 60).to_i
 
+
+def dms(arg)
   
+degrees = arg.to_i 
 
-  
-      minutes_num.to_s.rjust(2, "0") if minutes_num < 10
-      minutes_num.to_s.rjust(2, "0") if minutes_num < 10
-              
-    
+total_seconds = (arg - degrees) * MINUTES_IN_A_DEGREE * SECONDS_IN_A_MINUTE
+
+degrees = degrees.to_s
+
+minutes = (total_seconds / SECONDS_IN_A_MINUTE).to_i
+
+seconds = (total_seconds %  SECONDS_IN_A_MINUTE).to_i
 
 
-  degree_num + DEGREE + minutes_num + MINUTES + seconds_num + SECONDS
+format(degrees + DEGREE + "%.2d""'""%.2d""\"", minutes, seconds)
 end
-z
 
-p dms(30) #== %(30°00'00")
+p dms(30) == %(30°00'00")
 p dms(76.73) == %(76°43'48")
 p dms(254.6) #== %(254°36'00")
-p dms(93.034773) #== %(93°02'05")
- p dms(0) #== %(0°00'00")
-# p dms(360) == %(360°00'00") || dms(360) == %(0°00'00")
+p dms(93.034773) == %(93°02'05")
+p dms(0) == %(0°00'00")
+p dms(360) == %(360°00'00") || dms(360) == %(0°00'00")
+
+

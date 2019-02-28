@@ -13,6 +13,15 @@ easy6
 
 
 
+-------------
+learn more about: 
 
-learn more about Kernel#format
-                 Numeric#divmod
+Kernel#format
+
+Numeric#divmod
+
+#each_with_index
+
+Array#count
+
+
