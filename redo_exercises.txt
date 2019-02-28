@@ -10,6 +10,9 @@ easy6
  - cute angles - 
  - delete vowels. Method worked, but couldve used String#delete
 
+easy8 
+  sum of sum; answer has upto, slice, reduce
+  all_substrings.rb
 
 
 
