@@ -32,5 +32,6 @@ Numeric#divmod
 #each_with_index
 
 Array#count
+String#count
 
 

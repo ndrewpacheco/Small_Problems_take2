@@ -46,17 +46,17 @@ WHITESPACE = " "
 
 def diamond(n)
   return puts STAR if n == 1
+
   whitespace_count = (n / 2)
   star_count = 1
 
   loop do
-    puts ( WHITESPACE * whitespace_count )  + ( STAR * star_count )
+    puts ( WHITESPACE * whitespace_count ) + ( STAR * star_count )
     
     break if whitespace_count == 0
     whitespace_count -= 1
     star_count += 2
   end
-
 
   loop do
     whitespace_count += 1 
@@ -64,9 +64,6 @@ def diamond(n)
     puts ( WHITESPACE * whitespace_count ) + ( STAR * star_count )
     break if star_count == 1
   end
-
-
-
 end
 
 diamond(1)

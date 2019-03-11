@@ -27,7 +27,7 @@ def fibonacci_last(n)
   fib_arr = [1, 1]
 
   (n-2).times do
-    new_fib_num =  fib_arr[-2]  + fib_arr[-1] 
+    new_fib_num = fib_arr[-2] + fib_arr[-1] 
     fib_arr << new_fib_num % 10
   end
   fib_arr.last
