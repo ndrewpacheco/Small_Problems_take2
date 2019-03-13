@@ -44,13 +44,10 @@
 
 
 def bubble_sort!(arr)
-  cleared = false
+  sorted = false
   counter = 0
   
   length = arr.size - 1 
-  
-
-
   
 
     length.times do 
@@ -58,12 +55,11 @@ def bubble_sort!(arr)
       # code
       swap_item = arr.delete_at(counter)
       arr.insert(counter + 1, swap_item)
-
     end
     counter += 1
   end
   
-  bubble_sort!(arr)
+  
 end
 
 

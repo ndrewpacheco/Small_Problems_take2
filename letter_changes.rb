@@ -9,6 +9,27 @@ p letter_changes("Road trip9") == "Urdg wuls9"
 p letter_changes("EMAILZ@gmail.com") == "HPDLOC@jpdlo.frp"
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # def letter_changes(str)
 #   alphabet = ('a'..'z').to_a
 
