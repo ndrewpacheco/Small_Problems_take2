@@ -1,5 +1,7 @@
 # Have the method letter_changes(str) take the str parameter being passed and
-# modify it using the following algorithm. Replace every letter in the string
+# modify it using the following algorithm. 
+
+# Replace every letter in the string
 # with the 3rd letter following it in the alphabet (ie. c becomes f, Z becomes C).
 # Then return this modified string.
 
@@ -9,6 +11,11 @@ p letter_changes("Road trip9") == "Urdg wuls9"
 p letter_changes("EMAILZ@gmail.com") == "HPDLOC@jpdlo.frp"
 
 
+# make use of a constant containing the alphabet
+  # array
+    # special case the last three letters
+
+    
 
 
 

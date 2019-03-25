@@ -30,33 +30,36 @@
 # => 1 + 1
 # => 2
 
-# arg.to_s 
-# split into characters
-# iterate through string, char back into integer
- # var: total sum. add each integer into sum. return sum
+# p digital_root(16) #== 7
+# p digital_root(942) #== 6
+# p digital_root(132189) #== 6
+# p digital_root(493193) #== 2
+
+# num turn to a string, chars, and then turn each char into an int. take the sum of the array 
+
+# sum = num.to_s.chars.map {|char| char.to_i }.sum
+
+
+# if the sum is two digits or larger,  repeat the proccess above, else return the sum
+# if sum > 9, digital_root(sum), else sum
 
 
 
 
-# def digital_root(num)
-#   return num if num < 10
-#   total_sum = 0
-#   num_into_str = num.to_s
-  
-#   num_into_str.chars.each do |char|
-#     char_into_int = char.to_i
-#     total_sum += char_into_int
-#   end
-#   digital_root(total_sum)
-# end
 
 def digital_root(num)
-  return num if num < 10
-  new_num = num.digits.sum
-  digital_root(new_num)
+  sum = num.to_s.chars.map {|char| char.to_i }.sum
+  if sum > 9
+    digital_root(sum)
+  else
+    sum
+  end
 end
 
-p digital_root(16) #== 7
-p digital_root(942) #== 6
-p digital_root(132189) #== 6
-p digital_root(493193) #== 2
+
+ p digital_root(16) == 7
+ p digital_root(942) == 6
+ p digital_root(132189) == 6
+ p digital_root(493193) == 2
+
+
